@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <ImageView
+            android:layout_width="228dp"
+            android:layout_height="150dp" app:srcCompat="@drawable/autodraw_13_06_2022_removebg_preview"
+            android:id="@+id/imageView" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.058"
+            app:layout_constraintHorizontal_bias="0.497"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/nameText"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" android:hint="Nom"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/surnameText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintTop_toBottomOf="@+id/nameText"
+            android:layout_marginTop="20dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" android:hint="Prenom"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/addressText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintTop_toBottomOf="@+id/surnameText" android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+            android:hint="Adresse"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/phoneText"
+            app:layout_constraintTop_toBottomOf="@+id/addressText"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.023" android:hint="+33"/>
+    <Spinner
+            android:layout_width="288dp"
+            android:layout_height="32dp" android:id="@+id/burgerSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/phoneText" android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:entries="@array/burger_list"/>
+    <Button
+            android:text="Valider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/validationButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintTop_toBottomOf="@+id/burgerSpinner" android:layout_marginTop="76dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.125"/>
+    <TextView
+            android:text="00:00"
+            android:layout_width="78dp"
+            android:layout_height="38dp" android:id="@+id/timeTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="24sp" android:textColor="#3F51B5" android:textStyle="bold"
+            android:lineSpacingExtra="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.621"
+            app:layout_constraintBottom_toTopOf="@+id/validationButton"
+            app:layout_constraintTop_toBottomOf="@+id/burgerSpinner" app:layout_constraintVertical_bias="0.841"/>
+    <ImageView
+            android:layout_width="44dp"
+            android:layout_height="42dp" app:srcCompat="@drawable/ic_baseline_access_time_24"
+            android:id="@+id/imageTime"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toStartOf="@+id/timeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/burgerSpinner"
+            app:layout_constraintBottom_toTopOf="@+id/validationButton" app:layout_constraintHorizontal_bias="0.847"
+            app:layout_constraintVertical_bias="0.833"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
